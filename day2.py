@@ -68,3 +68,4 @@ x2 = np.array([[1,2],[3,4]])
 print(np.sum(x2))           #10
 print(np.sum(x2,axis=0))    #[4 6]  列计算
 print(np.sum(x2,axis=1))    #[3 7]  行计算
+
