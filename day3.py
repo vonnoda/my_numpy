@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 import numpy as np
-#转置矩阵
+import time
+
+# 转置矩阵
 x = np.array([[1,2],[3,4]])
 print(x)
 '''[[1 2]
@@ -10,7 +12,7 @@ print(x.T)  #数组对象的T属性是用来转置矩阵
 '''[[1 3]
     [2 4]]'''
 
-#数组的变形
+# #数组的变形
 x1 = np.array([1,2,3])
 print(x1.reshape(1,3))      #[[1 2 3]]
 print(x1[np.newaxis,:])     #通过newaxis获得行向量 [[1 2 3]]
@@ -19,9 +21,9 @@ print(x1[:,np.newaxis])     #通过newaxis获得列向量
     [2]
     [3]]'''
 
-#数组的拼接和分裂
+# #数组的拼接和分裂
 
-#数组的拼接可以通过concatenate函数和stack函数实现
+# #数组的拼接可以通过concatenate函数和stack函数实现
 a = np.array([1,2,3])
 b = np.array([3,2,1])
 print(np.concatenate([a,b]))    #数组的拼接用concatenate属性完成，可拼接多个数组
@@ -124,3 +126,32 @@ print(np.multiply.outer(j,j))
     [ 3  6  9 12 15]
     [ 4  8 12 16 20]
     [ 5 10 15 20 25]]'''
+
+#多维度聚合
+#不同维度的最大/小值
+np.random.seed(0)
+k = np.random.random((3,4))
+print(np.min(k,axis=0))  #每一列的最小值 [0.4236548  0.38344152 0.43758721 0.52889492]
+print(k.min(axis=0))    #两种写法都行 [0.4236548  0.38344152 0.43758721 0.52889492]
+print(k.min())  #0.3834415188257777    不指定维度只输出最小值
+print(k.max(axis=1))    #每一行的最大值 [0.71518937 0.891773   0.96366276]
+
+#其他聚合函数
+
+m = np.arange(1, 6)
+print(np.sum(m))        #求和      15
+print(np.prod(m))       #求乘积    120
+print(m.mean())         #求平均值   3.0
+print(m.std())          #求标准差   1.4142135623730951
+print(m.var())          #求方差    2.0
+print(m.min())          #求最小值   1
+print(m.max())          #求最大值   5
+print(m.argmin())       #找出最小值索引    0
+print(m.argmax())       #找出最大值索引    4
+print(np.median(m))     #求中位数   3.0
+print(m.any())          #判断是否存在元素为真 True
+print(m.all())          #判断所有元素是否为真 True
+
+
+
+
