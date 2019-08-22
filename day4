@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+import numpy as np
+
+#广播(broadcasting)
+#广播可以理解为用于不同形状的数组进行算术运算的规则
+
+a = np.array([0,1,2])
+b = np.ones((3,3))
+print(a+b)          #一位数组沿着第二个维度扩展了，扩展到匹配高维数组的shape
+'''[[1. 2. 3.]
+    [1. 2. 3.]
+    [1. 2. 3.]]'''
+a1 = np.arange(3)
+b1 = np.arange(3)[:,np.newaxis]
+print(a1+b1)
+'''[[0 1 2]
+    [1 2 3]
+    [2 3 4]]'''
