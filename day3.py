@@ -154,4 +154,3 @@ print(m.all())          #判断所有元素是否为真 True
 print(np.percentile(m,25))  #求分位数，25是上四分位，75是下四分位  2.0
 
 
-
