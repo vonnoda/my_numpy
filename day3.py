@@ -12,6 +12,7 @@ print(x.T)  #数组对象的T属性是用来转置矩阵
 '''[[1 3]
     [2 4]]'''
 
+
 # #数组的变形
 x1 = np.array([1,2,3])
 print(x1.reshape(1,3))      #[[1 2 3]]
@@ -20,6 +21,8 @@ print(x1[:,np.newaxis])     #通过newaxis获得列向量
 '''[[1]
     [2]
     [3]]'''
+x2 = np.transpose(np.array([[1,2,3]]))
+print(x2)
 
 # #数组的拼接和分裂
 
@@ -152,4 +155,7 @@ print(np.median(m))     #求中位数   3.0
 print(m.any())          #判断是否存在元素为真 True
 print(m.all())          #判断所有元素是否为真 True
 print(np.percentile(m,25))  #求分位数，25是上四分位，75是下四分位  2.0
+
+
+
 
