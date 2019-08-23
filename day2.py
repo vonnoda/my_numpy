@@ -61,11 +61,10 @@ print(np.divide(x,y))
 v = np.array([9,10])
 w = np.array([11, 12])
 
-print(v.dot(w)) #dot函数计算向量内积，将向量乘以矩阵，并乘以矩阵。等同于下面的表达式
-print(np.dot(v,w))  #dot函数可以作为numpy模块中的函数，也可以作为数组对象的实例方法
+print(v.dot(w)) #219  dot函数计算向量内积，将向量乘以矩阵，并乘以矩阵。等同于下面的表达式
+print(np.dot(v,w))  #219  dot函数可以作为numpy模块中的函数，也可以作为数组对象的实例方法
 
 x2 = np.array([[1,2],[3,4]])
 print(np.sum(x2))           #10
 print(np.sum(x2,axis=0))    #[4 6]  列计算
 print(np.sum(x2,axis=1))    #[3 7]  行计算
-
