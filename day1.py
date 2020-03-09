@@ -12,7 +12,7 @@ d = np.linspace(0,2,5)      #从0到2，数量为5
 e = np.array([0,1,2,3.14,4])    #数据类型不一致，numpy会自动向上转换
 f = np.array([1,2,3,4],dtype=float32)     #可以用dtype关键字设置数据类型
 g = np.array([range(i,i+3) for i in [2,4,6]])   #可以初始化多维数组
-h = np.logspace(1,5,3,base=2,dtype=int)   #创建等比数列数组，q为2，数量为3，指数从1到5
+h = np.logspace(1,5,3,base=2,dtype=int)   #创建等比数列数组，从2的1次幂到2的5次幂，数量为3
 i = np.frombuffer(b'HelloWorld',dtype='S1') #py3中str是Unicode类型，需要转成bytestring，所以加b
 j = np.full((2,2),7)    #创建常量数组
 k = np.eye(2)       #创建单位矩阵
